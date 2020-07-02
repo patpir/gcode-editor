@@ -1,0 +1,8 @@
+github.com/256dpi/gcode v0.2.0 h1:GX+bWOBAoc7qIMjI3LyTvM8UM3heyBWR2gTFWSzZqmU=
+github.com/256dpi/gcode v0.2.0/go.mod h1:NlK/pJC//TiLUFuRasCr7X2oIy9xCRrnaNIzMnrzuGY=
+github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/patpir/svgshapes v1.1.0 h1:SR5wMR/oA7OucHIZp4lPoK3QVn64OaCdUgq5aJg/0/o=
+github.com/patpir/svgshapes v1.1.0/go.mod h1:cNuSYOMgE8GCglJYKJhBa4cFIhoKQ4gp9IVEJGwIPzU=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
