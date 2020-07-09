@@ -46,8 +46,7 @@ func (in *Interpreter) Walk() error {
 	return nil
 }
 
-func (in *Interpreter) Next() error {
-	//log.Println("Line:", in.currentLine)
+func (in *Interpreter) nextLine() (gcode.Line, error) {
 	if len(in.file.Lines) > in.currentLine {
 		line := in.file.Lines[in.currentLine]
 		in.currentLine += 1
@@ -57,7 +56,7 @@ func (in *Interpreter) Next() error {
 			if line.Comment != "" {
 				in.call(in.Handler.HandleComment, line.Comment)
 			}
-			return nil
+			return line, nil
 		}
 
 		params := lineParams(line)
@@ -65,7 +64,7 @@ func (in *Interpreter) Next() error {
 		case gc("G", 0), gc("G", 1):
 			movement, err := in.mover.Move(params)
 			if err != nil {
-				return err
+				return line, err
 			}
 			move := MoveCommand{
 				Movement: movement,
@@ -94,7 +93,7 @@ func (in *Interpreter) Next() error {
 			in.mover.SetReference(params)
 		default:
 			if line.Codes[0].Letter == "G" {
-				return fmt.Errorf("unknown command: %v", line.Codes[0])
+				return line, fmt.Errorf("unknown command: %v", line.Codes[0])
 			}
 /*
 			cmd := UnknownCommand{
@@ -105,10 +104,19 @@ func (in *Interpreter) Next() error {
 */
 		}
 
-		return nil
+		return line, nil
 	}
 
-	return io.EOF
+	return gcode.Line{}, io.EOF
+}
+
+func (in *Interpreter) Next() error {
+	_, err := in.nextLine()
+	return err
+}
+
+func (in *Interpreter) Position() Position {
+	return in.mover.LastMovement().Position
 }
 
 func (in Interpreter) call(handleFunc interface{}, param interface{}) {

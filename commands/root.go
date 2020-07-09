@@ -21,6 +21,9 @@ func getRootCmd() *cobra.Command {
 		Short: "gcode pattern detector",
 		Long: "Detect and modify patterns in GCode files",
 	}
-	rootCmd.AddCommand(getVisualizeCmd())
+	rootCmd.AddCommand(
+		getLayerCmd(),
+		getVisualizeCmd(),
+	)
 	return rootCmd
 }
