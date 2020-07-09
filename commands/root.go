@@ -17,9 +17,8 @@ func Execute() {
 
 func getRootCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use: "gcpd",
-		Short: "gcode pattern detector",
-		Long: "Detect and modify patterns in GCode files",
+		Use: "gcode-editor",
+		Short: "Basic gcode analysis and editing.",
 	}
 	rootCmd.AddCommand(
 		getLayerCmd(),
