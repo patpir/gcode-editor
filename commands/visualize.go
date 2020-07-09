@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/patpir/gcode-pattern-detect/gcode"
-	"github.com/patpir/gcode-pattern-detect/pattern"
+	"github.com/patpir/gcode-editor/gcode"
+	"github.com/patpir/gcode-editor/pattern"
 	"github.com/patpir/svgshapes"
 	"github.com/spf13/cobra"
 )

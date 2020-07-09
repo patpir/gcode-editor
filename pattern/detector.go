@@ -1,8 +1,8 @@
 package pattern
 
 import (
-	"github.com/patpir/gcode-pattern-detect/analysis"
-	"github.com/patpir/gcode-pattern-detect/gcode"
+	"github.com/patpir/gcode-editor/analysis"
+	"github.com/patpir/gcode-editor/gcode"
 )
 
 type Detector struct {

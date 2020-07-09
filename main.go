@@ -4,7 +4,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/patpir/gcode-pattern-detect/commands"
+	"github.com/patpir/gcode-editor/commands"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/patpir/gcode-pattern-detect
+module github.com/patpir/gcode-editor
 
 go 1.13
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/patpir/svgshapes"
-	"github.com/patpir/gcode-pattern-detect/analysis"
+	"github.com/patpir/gcode-editor/analysis"
 )
 
 // Plot adds graphs to the target SVG document.
